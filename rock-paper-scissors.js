@@ -1,8 +1,6 @@
 let playerScore = 0;
 let computerScore = 0;
 
-let roundsToPlay = 5;
-
 // Select elements
 const playBtn = document.querySelector("#play");
 const playDiv = document.querySelector("#play-container");
@@ -114,7 +112,7 @@ function handlePlayerChoice(button) {
   updateUIScore();
   --roundsToPlay;
 
-  if (roundsToPlay <= 0) {
+  if (playerScore === 5 || computerScore === 5) {
     finishGame();
   }
 }
